@@ -38,11 +38,19 @@ const sendEmail = (req, res) => {
 
   transporter.use("compile", hbs(handlebarOptions));
 
+  const emailSubject = `${emailPayload.subject}`;
+  const emailTemplate = "otpMail"
+
+  // send mail with defined transport object
+  // if (emailPayload?.id === "1" || emailPayload?.id === undefined) {
+  //   const emailTemplate = "otpMail";
+  // }
+
   const mailOptions = {
     from: process.env.EMAIL,
     to: emailPayload.email,
-    subject: "Tralio Signup OTP",
-    template: "otpMail",
+    subject: emailSubject,
+    template: emailTemplate,
     context: {
       otp: randomNumber,
       project: emailPayload.project,
