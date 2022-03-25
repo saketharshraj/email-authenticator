@@ -1,0 +1,12 @@
+{
+  "name": "email-authenticator",
+  "version": "1.0.0",
+  "description": "E-mail Authentication service using OTP",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Harsh Raj",
+  "license": "ISC"
+}
